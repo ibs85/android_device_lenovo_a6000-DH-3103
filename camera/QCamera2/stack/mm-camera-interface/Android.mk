@@ -43,7 +43,7 @@ ifeq ($(call is-platform-sdk-version-at-least,20),true)
 LOCAL_C_INCLUDES += system/media/camera/include
 endif
 
-ifneq ($(call is-platform-sdk-version-at-least,17),true)
+ifneq (1,$(filter 1,$(shell echo "$$(( $(PLATFORM_SDK_VERSION) >= 17 ))" )))
   LOCAL_CFLAGS += -include bionic/libc/kernel/common/linux/socket.h
   LOCAL_CFLAGS += -include bionic/libc/kernel/common/linux/un.h
 endif
