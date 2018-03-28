@@ -15,7 +15,6 @@
 
 # Inherit some common A6000 stuff.
 $(call inherit-product, device/lenovo/a6000/full_a6000.mk)
-$(call inherit-product, device/lenovo/a6000/device.mk)
 
 # Inherit some common XenonHD stuff.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
