@@ -13,10 +13,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Inherit some common A6000 stuff.
 $(call inherit-product, device/lenovo/a6000/full_a6000.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Carbon stuff.
+$(call inherit-product, vendor/carbon/config/common.mk)
+$(call inherit-product, vendor/carbon/config/gsm.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
@@ -24,7 +26,11 @@ TARGET_BOARD_PLATFORM_VARIANT := msm8916
 # Assert
 TARGET_OTA_ASSERT_DEVICE := Kraft-T,a6000,K30-T,A6000,Kraft-W,Kraft-C,k30t,msm8916,Kraft-A6000,wt86518
 
-PRODUCT_NAME := lineage_a6000
+PRODUCT_NAME := carbon_a6000
+PRODUCT_DEVICE := a6000
+PRODUCT_BRAND := Lenovo
+PRODUCT_MODEL := a6000
+PRODUCT_MANUFACTURER := Lenovo
 BOARD_VENDOR := Lenovo
 
 # Build fingerprint
